@@ -13,6 +13,10 @@ function App(): React.JSX.Element {
             </p>
 
             <p>Site by Aidan Tokarski</p>
+
+            <p>
+                Hello World
+            </p>
         </div>
     );
 }
