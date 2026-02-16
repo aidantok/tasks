@@ -1,22 +1,57 @@
 import React from "react";
 import "./App.css";
+import image from "./assets/images/ellie.jpg";
+import { Button, Col, Container, Row } from "react-bootstrap";
 
 function App(): React.JSX.Element {
     return (
+        // className unused
         <div className="App">
-            <header className="App-header">
+            <header className="App-header">Site by Aidan Tokarski</header>
+
+            <h1 className="Text-header">
                 UD CISC275 with React Hooks and TypeScript
-            </header>
-            <p>
+            </h1>
+
+            <p className="Text-header">
                 Edit <code>src/App.tsx</code> and save. This page will
                 automatically reload.
             </p>
 
-            <p>Site by Aidan Tokarski</p>
+            <Button
+                onClick={() => {
+                    console.log("Hello World!");
+                }}
+                className="Button"
+            >
+                Log Hello World
+            </Button>
 
-            <p>
-                Hello World
-            </p>
+            <Container>
+                <Row>
+                    <Col>
+                        <div className="Rectangle">rectangle!</div>
+
+                        <p>Aidan&#39;s personal must-listen song list:</p>
+                        <ul>
+                            <li>Aja by Steely Dan</li>
+                            <li>Conspiracy by Paramore</li>
+                            <li>Youngest Daughter by Superheaven</li>
+                            <li>*(niche alert) Missing Voices by Lamorn</li>
+                        </ul>
+                    </Col>
+
+                    <Col>
+                        <div className="Rectangle">rectangle!</div>
+
+                        <img
+                            className="Image"
+                            src={image}
+                            alt="A picture of my dog Ellie"
+                        />
+                    </Col>
+                </Row>
+            </Container>
         </div>
     );
 }
