@@ -30,7 +30,21 @@ function App(): React.JSX.Element {
             <Container>
                 <Row>
                     <Col>
-                        <div className="Rectangle">rectangle!</div>
+                        <div
+                            style={{
+                                display: "block",
+                                marginLeft: "auto",
+                                marginRight: "auto",
+                                backgroundColor: "red",
+                                height: "20px",
+                                width: "70px",
+                                fontSize: "4px",
+                                color: "white",
+                                textAlign: "center",
+                            }}
+                        >
+                            rectangle!
+                        </div>
 
                         <p>Aidan&#39;s personal must-listen song list:</p>
                         <ul>
@@ -42,7 +56,21 @@ function App(): React.JSX.Element {
                     </Col>
 
                     <Col>
-                        <div className="Rectangle">rectangle!</div>
+                        <div
+                            style={{
+                                display: "block",
+                                marginLeft: "auto",
+                                marginRight: "auto",
+                                backgroundColor: "red",
+                                height: "20px",
+                                width: "70px",
+                                fontSize: "4px",
+                                color: "white",
+                                textAlign: "center",
+                            }}
+                        >
+                            rectangle!
+                        </div>
 
                         <img
                             className="Image"
