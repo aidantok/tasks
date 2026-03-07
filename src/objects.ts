@@ -177,3 +177,18 @@ export function mergeQuestion(
         published: false,
     };
 }
+
+/**
+ * NEW HELPER FUNCTION
+ * Consumes question, new option, target index; updates option at given index to new option
+ */
+export function editOptions(
+    question: Question,
+    newOption: string,
+    targetIndex: number,
+): Question {
+    const options = question.options.map((option: string): string => option);
+    options.splice(targetIndex, 1, newOption);
+
+    return { ...question, options: options };
+}
