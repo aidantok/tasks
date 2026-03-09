@@ -15,7 +15,7 @@ function App(): React.JSX.Element {
 
             <h1 className="Text-header">
                 UD CISC275 with React Hooks and TypeScript
-            </header>
+            </h1>
             <hr></hr>
             <Counter></Counter>
             <hr />
