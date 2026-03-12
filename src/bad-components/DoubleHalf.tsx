@@ -4,28 +4,16 @@ import { Button } from "react-bootstrap";
 export function DoubleHalf(): React.JSX.Element {
     const [dhValue, setDhValue] = useState<number>(10);
 
-    function Doubler(): React.JSX.Element {
-        return (
-            <Button
-                onClick={() => {
-                    setDhValue(2 * dhValue);
-                }}
-            >
-                Double
-            </Button>
-        );
+    function Doubler({
+        onDouble,
+    }: {
+        onDouble: () => void;
+    }): React.JSX.Element {
+        return <Button onClick={onDouble}>Double</Button>;
     }
 
-    function Halver(): React.JSX.Element {
-        return (
-            <Button
-                onClick={() => {
-                    setDhValue(0.5 * dhValue);
-                }}
-            >
-                Halve
-            </Button>
-        );
+    function Halver({ onHalve }: { onHalve: () => void }): React.JSX.Element {
+        return <Button onClick={onHalve}>Halve</Button>;
     }
 
     return (
@@ -34,8 +22,16 @@ export function DoubleHalf(): React.JSX.Element {
             <div>
                 The current value is: <span>{dhValue}</span>
             </div>
-            <Doubler></Doubler>
-            <Halver></Halver>
+            <Doubler
+                onDouble={() => {
+                    setDhValue((value) => 2 * value);
+                }}
+            ></Doubler>
+            <Halver
+                onHalve={() => {
+                    setDhValue((value) => value * 0.5);
+                }}
+            ></Halver>
         </div>
     );
 }
