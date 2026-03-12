@@ -39,8 +39,6 @@ export function ShoveBox(): React.JSX.Element {
         );
     }
 
-    const box = MoveableBox();
-
     return (
         <div>
             <h3>Shove Box</h3>
@@ -50,7 +48,7 @@ export function ShoveBox(): React.JSX.Element {
                     position={position}
                     setPosition={setPosition}
                 ></ShoveBoxButton>
-                {box}
+                <MoveableBox></MoveableBox>
             </div>
         </div>
     );
