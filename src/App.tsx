@@ -21,7 +21,7 @@ function App(): React.JSX.Element {
                 UD CISC275 with React Hooks and TypeScript
             </h1>
             <hr></hr>
-            {/* <DoubleHalf></DoubleHalf> */}
+            <DoubleHalf></DoubleHalf>
             <hr></hr>
             <ChooseTeam></ChooseTeam>
             <hr></hr>
