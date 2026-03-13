@@ -21,15 +21,8 @@ export function ChooseTeam(): React.JSX.Element {
     }
 
     function clearTeam() {
+        setAllOptions([...allOptions, ...team]);
         setTeam([]);
-        setAllOptions([
-            "Alan Turing",
-            "Grace Hopper",
-            "Ada Lovelace",
-            "Charles Babbage",
-            "Barbara Liskov",
-            "Margaret Hamilton",
-        ]);
     }
 
     return (

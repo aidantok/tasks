@@ -4,39 +4,8 @@ import { Button } from "react-bootstrap";
 export function ShoveBox(): React.JSX.Element {
     const [position, setPosition] = useState<number>(10);
 
-    function ShoveBoxButton({
-        position,
-        setPosition,
-    }: {
-        position: number;
-        setPosition: (newPosition: number) => void;
-    }) {
-        return (
-            <Button
-                onClick={() => {
-                    setPosition(4 + position);
-                }}
-            >
-                Shove the Box
-            </Button>
-        );
-    }
-
-    function MoveableBox(): React.JSX.Element {
-        return (
-            <div
-                data-testid="moveable-box"
-                style={{
-                    width: "50px",
-                    height: "50px",
-                    backgroundColor: "lightblue",
-                    border: "1px solid blue",
-                    display: "inline-block",
-                    verticalAlign: "bottom",
-                    marginLeft: position + "px",
-                }}
-            ></div>
-        );
+    function handleShove() {
+        setPosition((prev) => prev + 4);
     }
 
     return (
@@ -44,11 +13,19 @@ export function ShoveBox(): React.JSX.Element {
             <h3>Shove Box</h3>
             <span>The box is at: {position}</span>
             <div>
-                <ShoveBoxButton
-                    position={position}
-                    setPosition={setPosition}
-                ></ShoveBoxButton>
-                <MoveableBox></MoveableBox>
+                <Button onClick={handleShove}>Shove the Box</Button>
+                <div
+                    data-testid="moveable-box"
+                    style={{
+                        width: "50px",
+                        height: "50px",
+                        backgroundColor: "lightblue",
+                        border: "1px solid blue",
+                        display: "inline-block",
+                        verticalAlign: "bottom",
+                        marginLeft: position + "px",
+                    }}
+                ></div>
             </div>
         </div>
     );
